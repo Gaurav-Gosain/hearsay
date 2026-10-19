@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentions</title>
+<link rel="stylesheet" href="xterm.css">
+<link rel="stylesheet" href="webterm.css">
+<style>
+  :root { --ink: #15141c; --muted: #7d7896; }
+  html, body { margin: 0; height: 100%; background: var(--ink); }
+  body { display: flex; flex-direction: column; }
+  #stage { position: relative; flex: 1; min-height: 0; }
+  /* webterm.css sizes .webterm to 100%; the inset has to win over that. */
+  #terminal { position: absolute; inset: 10px; width: auto; height: auto; }
+  #boot { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted);
+    font: 14px ui-monospace, monospace; background: var(--ink); z-index: 2; transition: opacity .3s; }
+  #boot.gone { opacity: 0; pointer-events: none; }
+  noscript { color: var(--muted); font: 14px ui-monospace, monospace; padding: 16px; }
+</style>
+</head>
+<body>
+<main id="stage">
+  <div id="terminal" class="webterm"></div>
+  <div id="boot">Loading...</div>
+</main>
+<noscript>This page needs JavaScript and WebAssembly.</noscript>
+<script src="webterm.js"></script>
+<script src="wasm_exec.js"></script>
+<script>
+'use strict';
+// Query parameters:
+//   ?feed=URL   read another feed (it must allow this origin to fetch it)
+//   ?demo       show the bundled demo feed
+const params = new URLSearchParams(location.search);
+const boot = document.getElementById('boot');
+
+// The feed text, or "" for the demo. A missing or broken feed shows the demo.
+async function loadFeed() {
+  if (params.has('demo')) return '';
+  const url = params.get('feed') || 'mentions.json';
+  try {
+    const res = await fetch(url, { headers: { accept: 'application/json' } });
+    if (!res.ok) return '';
+    const text = await res.text();
+    JSON.parse(text);
+    return text;
+  } catch (err) {
+    console.warn('mentions: cannot read the feed, showing the demo', err);
+    return '';
+  }
+}
+
+// A static host that cannot set Content-Encoding serves no mentions.wasm, so
+// the page then fetches the gzip file and unpacks it itself.
+async function loadWasm(importObject) {
+  let res = await fetch('mentions.wasm');
+  if (!res.ok) {
+    const gz = await fetch('mentions.wasm.gz');
+    if (!gz.ok) throw new Error('no mentions.wasm and no mentions.wasm.gz');
+    res = new Response(gz.body.pipeThrough(new DecompressionStream('gzip')),
+      { headers: { 'content-type': 'application/wasm' } });
+  }
+  return WebAssembly.instantiateStreaming(res, importObject);
+}
+
+function isReloadKey(e) {
+  if (e.key === 'F5') return true;
+  return (e.ctrlKey || e.metaKey) && !e.altKey && (e.code === 'KeyR' || e.key === 'r' || e.key === 'R');
+}
+
+(async function main() {
+  const small = matchMedia('(max-width: 700px)').matches;
+  const term = new WebTerm.WebTerm({
+    fontFamily: 'JetBrainsMono Nerd Font Mono',
+    fontSize: small ? 11 : 14,
+    fonts: [
+      { source: "url(fonts/JetBrainsMonoNerdFontMono-Regular.woff2) format('woff2')", weight: '400', style: 'normal' },
+      { source: "url(fonts/JetBrainsMonoNerdFontMono-Bold.woff2) format('woff2')", weight: '700', style: 'normal' },
+    ],
+    renderer: { prefer: 'webgl' },
+    theme: { background: '#15141c', foreground: '#ebe8f7' },
+    mouse: { suppressContextMenu: true },
+    keyboard: { onKeyEvent: (e) => !isReloadKey(e) },
+    xterm: { macOptionIsMeta: true },
+  });
+
+  const go = new Go();
+  const [wasm, feedText] = await Promise.all([loadWasm(go.importObject), loadFeed(), term.open(document.getElementById('terminal'))]);
+  window.webterm = term;
+  window.mentionsFeedText = feedText;
+  window.mentionsInitialSize = [term.cols, term.rows];
+  window.onMentionsReady = (api) => {
+    let first = true;
+    api.onOutput((bytes) => {
+      if (first) {
+        first = false;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          boot.classList.add('gone');
+          window.mentionsFirstFrame = true;
+        }));
+      }
+      term.write(bytes);
+      term.flush();
+    });
+    term.attach({ name: 'wasm', start() {}, send(bytes) { api.input(bytes); }, close() {} });
+    term.on('resize', ({ cols, rows }) => api.resize(cols, rows));
+    api.resize(term.cols, term.rows);
+    term.focus();
+  };
+  window.onMentionsExit = () => {
+    boot.textContent = 'The viewer stopped. Reload the page to start it again.';
+    boot.classList.remove('gone');
+  };
+  go.run(wasm.instance);
+})().catch((err) => {
+  boot.textContent = 'The viewer did not start: ' + err;
+  console.error(err);
+});
+</script>
+</body>
+</html>
