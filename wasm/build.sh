@@ -33,9 +33,14 @@ gzip -9 -n -c "$out/hearsay.wasm" >"$out/hearsay.wasm.gz"
 brotli -q 11 -f -o "$out/hearsay.wasm.br" "$out/hearsay.wasm"
 cp "$(go env GOROOT)/lib/wasm/wasm_exec.js" "$out/"
 
-sip=$(go mod download -json "github.com/Gaurav-Gosain/sip@$sipver" | sed -n 's/^[[:space:]]*"Dir": "\(.*\)",$/\1/p')
+# sip is not a dependency of hearsay, so a clean machine has no copy of it.
+# go mod download fetches it. Its go.mod needs Go 1.26, which is why
+# hearsay's go.mod asks for 1.26 too.
+info=$(go mod download -json "github.com/Gaurav-Gosain/sip@$sipver" || true)
+sip=$(printf '%s\n' "$info" | sed -n 's/^[[:space:]]*"Dir": "\(.*\)",$/\1/p')
 if [ -z "$sip" ] || [ ! -f "$sip/static/webterm.js" ]; then
 	echo "build.sh: cannot find sip's webterm bundle (sip $sipver)" >&2
+	printf '%s\n' "$info" | sed -n 's/^[[:space:]]*"Error": "\(.*\)",*$/build.sh: \1/p' >&2
 	exit 1
 fi
 cp "$sip/static/webterm.js" "$sip/static/webterm.css" "$sip/static/xterm.css" "$out/"
