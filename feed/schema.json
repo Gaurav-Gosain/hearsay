@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mentions-feed-v1.schema.json",
+  "title": "Mentions feed, version 1",
+  "description": "The places a project is mentioned. See docs/feed.md.",
+  "type": "object",
+  "required": ["version", "project", "generated", "items"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "project": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "subtitle": { "type": "string", "maxLength": 60 },
+        "url": { "type": "string", "format": "uri" },
+        "colors": {
+          "type": "object",
+          "properties": {
+            "accent": { "$ref": "#/$defs/color" },
+            "accent2": { "$ref": "#/$defs/color" }
+          }
+        }
+      }
+    },
+    "generated": { "$ref": "#/$defs/time" },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "section": { "type": "string" },
+          "color": { "$ref": "#/$defs/color" },
+          "icon": { "type": "string", "maxLength": 4 },
+          "ascii": { "type": "string", "maxLength": 1 }
+        }
+      }
+    },
+    "items": { "type": "array", "items": { "$ref": "#/$defs/item" } }
+  },
+  "patternProperties": { "^x_": {} },
+  "$defs": {
+    "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+    "time": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}([Tt ]\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?([Zz]|[+-]\\d{2}:\\d{2})?)?$"
+    },
+    "item": {
+      "type": "object",
+      "required": ["id", "source", "kind", "url", "title"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "source": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "kind": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "group": { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "url": { "type": "string", "format": "uri" },
+        "title": { "type": "string" },
+        "author": { "type": "string" },
+        "published": { "$ref": "#/$defs/time" },
+        "excerpt": { "type": "string", "maxLength": 1000 },
+        "link_title": { "type": "string" },
+        "files": { "type": "array", "items": { "type": "string" } },
+        "metrics": {
+          "type": "object",
+          "additionalProperties": { "type": "number", "minimum": 0 }
+        },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "relevance": { "enum": ["real", "likely", "unverified", "noise", "automation", "own"] },
+        "reason": { "type": "string" },
+        "first_seen": { "$ref": "#/$defs/time" },
+        "last_seen": { "$ref": "#/$defs/time" },
+        "state": { "enum": ["new", "seen", "featured", "ignored"] }
+      }
+    }
+  }
+}
