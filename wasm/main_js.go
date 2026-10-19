@@ -9,6 +9,7 @@
 //	hearsay.onOutput(fn)       fn(Uint8Array) gets the bytes for the terminal
 //	hearsay.input(data)        keyboard and mouse bytes, a string or Uint8Array
 //	hearsay.resize(cols, rows) the renderer's size in cells
+//	hearsay.stop()             end the program, for a page that goes away
 //
 // Before go.run, the page sets:
 //
@@ -250,6 +251,10 @@ func main() {
 			// takes the message.
 			go prog.Send(tea.WindowSizeMsg{Width: c, Height: r})
 		}
+		return nil
+	}))
+	api.Set("stop", js.FuncOf(func(_ js.Value, _ []js.Value) any {
+		go prog.Quit()
 		return nil
 	}))
 	js.Global().Set("hearsay", api)
