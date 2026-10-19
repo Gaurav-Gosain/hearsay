@@ -17,7 +17,7 @@ import (
 	"strings"
 	"time"
 
-	"example.com/mentions-ui/feed"
+	"github.com/Gaurav-Gosain/hearsay/feed"
 )
 
 // anchor is "now" in the sample. demo.Feed moves every date so the anchor

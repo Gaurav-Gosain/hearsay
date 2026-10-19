@@ -1,0 +1,36 @@
+version: 2
+
+project_name: hearsay
+
+builds:
+  - main: .
+    binary: hearsay
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+    goos: [linux, darwin, windows, freebsd]
+    goarch: [amd64, arm64]
+
+archives:
+  - formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    files:
+      - LICENSE
+      - README.md
+      - docs/feed.md
+      - feed/schema.json
+
+checksum:
+  name_template: checksums.txt
+
+release:
+  extra_files:
+    - glob: hearsay-web.tar.gz
+
+changelog:
+  sort: asc

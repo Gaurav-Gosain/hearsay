@@ -132,7 +132,7 @@ Triage is local. The viewer writes it to a state file, and never to the feed.
 ## A public feed
 
 A public feed is a normal feed with the featured items only. Make it with
-`mentions publish`. It keeps `id`, `source`, `kind`, `group`, `url`, `title`,
+`hearsay publish`. It keeps `id`, `source`, `kind`, `group`, `url`, `title`,
 `author`, `published`, `excerpt`, `link_title`, `metrics` and `tags`. It drops
 `relevance`, `reason`, `files`, `first_seen`, `last_seen` and `state`, so a
 reader of the public feed starts with every item new.

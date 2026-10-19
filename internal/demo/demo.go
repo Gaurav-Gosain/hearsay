@@ -6,7 +6,7 @@ import (
 	_ "embed"
 	"time"
 
-	"example.com/mentions-ui/feed"
+	"github.com/Gaurav-Gosain/hearsay/feed"
 )
 
 //go:embed sample.json

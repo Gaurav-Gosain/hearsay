@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Check formatting
+        run: test -z "$(gofmt -l .)"
+      - run: go vet ./...
+      - run: go test ./...
+      - name: Build for the browser
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq brotli
+          wasm/build.sh dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web
+          path: dist

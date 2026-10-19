@@ -3,7 +3,7 @@
 #
 # Usage: wasm/build.sh [--raw] [outdir] [feed.json]
 #
-#   --raw      keep the uncompressed mentions.wasm as well
+#   --raw      keep the uncompressed hearsay.wasm as well
 #   outdir     default: dist/
 #   feed.json  copied into the folder as mentions.json. Without it the page
 #              shows the bundled demo.
@@ -28,9 +28,9 @@ out=$(cd "$out" && pwd)
 cd "$root"
 
 GOOS=js GOARCH=wasm go build -modfile "$modfile" -trimpath -ldflags "-s -w" \
-	-o "$out/mentions.wasm" ./wasm
-gzip -9 -n -c "$out/mentions.wasm" >"$out/mentions.wasm.gz"
-brotli -q 11 -f -o "$out/mentions.wasm.br" "$out/mentions.wasm"
+	-o "$out/hearsay.wasm" ./wasm
+gzip -9 -n -c "$out/hearsay.wasm" >"$out/hearsay.wasm.gz"
+brotli -q 11 -f -o "$out/hearsay.wasm.br" "$out/hearsay.wasm"
 cp "$(go env GOROOT)/lib/wasm/wasm_exec.js" "$out/"
 
 sip=$(go mod download -json "github.com/Gaurav-Gosain/sip@$sipver" | sed -n 's/^[[:space:]]*"Dir": "\(.*\)",$/\1/p')
@@ -49,9 +49,9 @@ fi
 chmod -R u+w "$out"
 
 size() { wc -c <"$1" | tr -d ' '; }
-rawsize=$(size "$out/mentions.wasm")
+rawsize=$(size "$out/hearsay.wasm")
 if [ "$raw" = 0 ]; then
-	rm -f "$out/mentions.wasm"
+	rm -f "$out/hearsay.wasm"
 fi
-echo "mentions.wasm: raw $rawsize, gzip $(size "$out/mentions.wasm.gz"), brotli $(size "$out/mentions.wasm.br") bytes"
+echo "hearsay.wasm: raw $rawsize, gzip $(size "$out/hearsay.wasm.gz"), brotli $(size "$out/hearsay.wasm.br") bytes"
 echo "wrote $out"

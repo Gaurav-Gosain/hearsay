@@ -22,18 +22,18 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 
-	"example.com/mentions-ui/feed"
-	"example.com/mentions-ui/internal/demo"
-	"example.com/mentions-ui/internal/ui"
+	"github.com/Gaurav-Gosain/hearsay/feed"
+	"github.com/Gaurav-Gosain/hearsay/internal/demo"
+	"github.com/Gaurav-Gosain/hearsay/internal/ui"
 )
 
 const usage = `Usage:
-  mentions [flags] [FEED]        show a feed (a file or an http(s) URL)
-  mentions --demo                show the bundled sample feed
-  mentions validate FEED         check a feed against the spec
-  mentions publish [flags] FEED  write a public feed with the featured items only
+  hearsay [flags] [FEED]        show a feed (a file or an http(s) URL)
+  hearsay --demo                show the bundled sample feed
+  hearsay validate FEED         check a feed against the spec
+  hearsay publish [flags] FEED  write a public feed with the featured items only
 
-FEED defaults to $MENTIONS_FEED, then ./mentions.json.
+FEED defaults to $HEARSAY_FEED, then ./mentions.json.
 
 Flags:
 `
@@ -51,7 +51,7 @@ func main() {
 }
 
 func run(args []string) int {
-	fs := flag.NewFlagSet("mentions", flag.ContinueOnError)
+	fs := flag.NewFlagSet("hearsay", flag.ContinueOnError)
 	fs.Usage = func() {
 		fmt.Fprint(fs.Output(), usage)
 		fs.PrintDefaults()
@@ -59,7 +59,7 @@ func run(args []string) int {
 	demoMode := fs.Bool("demo", false, "show the bundled sample feed. Triage stays in memory.")
 	statePath := fs.String("state", "", "the triage state file (default: next to a file feed, or in the user state folder for a URL)")
 	readOnly := fs.Bool("read-only", false, "keep triage in memory and write nothing")
-	ascii := fs.Bool("ascii", os.Getenv("MENTIONS_ASCII") != "", "use ASCII marks in place of Nerd Font glyphs")
+	ascii := fs.Bool("ascii", os.Getenv("HEARSAY_ASCII") != "", "use ASCII marks in place of Nerd Font glyphs")
 	name := fs.String("name", "", "the project name (default: from the feed)")
 	subtitle := fs.String("subtitle", "", "the line under the name (default: from the feed)")
 	accent := fs.String("accent", "", "the main colour, #rrggbb (default: from the feed)")
@@ -80,20 +80,20 @@ func run(args []string) int {
 	} else {
 		src := fs.Arg(0)
 		if src == "" {
-			src = os.Getenv("MENTIONS_FEED")
+			src = os.Getenv("HEARSAY_FEED")
 		}
 		if src == "" {
 			src = "mentions.json"
 		}
 		b, err := readFeed(src)
 		if err != nil {
-			fmt.Fprintln(os.Stderr, "mentions:", err)
-			fmt.Fprintln(os.Stderr, "Run mentions --demo to see the sample feed.")
+			fmt.Fprintln(os.Stderr, "hearsay:", err)
+			fmt.Fprintln(os.Stderr, "Run hearsay --demo to see the sample feed.")
 			return 1
 		}
 		f, err = feed.Parse(b)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "mentions: %s is not a valid feed:\n%v\n", src, err)
+			fmt.Fprintf(os.Stderr, "hearsay: %s is not a valid feed:\n%v\n", src, err)
 			return 1
 		}
 		switch {
@@ -115,13 +115,13 @@ func run(args []string) int {
 
 	tri, err := ui.NewTriage(store)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "mentions:", err)
+		fmt.Fprintln(os.Stderr, "hearsay:", err)
 		return 1
 	}
 	ds := ui.NewDataset(f)
 	m := ui.New(ds, tri, ui.Options{ASCII: *ascii, Note: note, Open: openURL})
 	if _, err := tea.NewProgram(m).Run(); err != nil {
-		fmt.Fprintln(os.Stderr, "mentions:", err)
+		fmt.Fprintln(os.Stderr, "hearsay:", err)
 		return 1
 	}
 	return 0
@@ -176,7 +176,7 @@ func defaultState(src, project string) string {
 		dir = filepath.Join(home, ".local", "state")
 	}
 	key := reUnsafe.ReplaceAllString(strings.TrimPrefix(strings.TrimPrefix(src, "https://"), "http://"), "_")
-	return filepath.Join(dir, "mentions", reUnsafe.ReplaceAllString(project, "_")+"-"+key+".json")
+	return filepath.Join(dir, "hearsay", reUnsafe.ReplaceAllString(project, "_")+"-"+key+".json")
 }
 
 func openURL(u string) tea.Cmd {
@@ -200,12 +200,12 @@ func openURL(u string) tea.Cmd {
 
 func validate(args []string) int {
 	if len(args) != 1 {
-		fmt.Fprintln(os.Stderr, "Usage: mentions validate FEED")
+		fmt.Fprintln(os.Stderr, "Usage: hearsay validate FEED")
 		return 2
 	}
 	b, err := readFeed(args[0])
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "mentions:", err)
+		fmt.Fprintln(os.Stderr, "hearsay:", err)
 		return 1
 	}
 	f, err := feed.Parse(b)
@@ -220,7 +220,7 @@ func validate(args []string) int {
 func publish(args []string) int {
 	fs := flag.NewFlagSet("publish", flag.ContinueOnError)
 	fs.Usage = func() {
-		fmt.Fprintln(fs.Output(), "Usage: mentions publish [-state FILE] [-o FILE] FEED")
+		fmt.Fprintln(fs.Output(), "Usage: hearsay publish [-state FILE] [-o FILE] FEED")
 		fmt.Fprintln(fs.Output(), "Writes a public feed: the featured items only, without relevance, reasons, files or seen times.")
 		fs.PrintDefaults()
 	}
@@ -239,7 +239,7 @@ func publish(args []string) int {
 	src := fs.Arg(0)
 	b, err := readFeed(src)
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "mentions:", err)
+		fmt.Fprintln(os.Stderr, "hearsay:", err)
 		return 1
 	}
 	f, err := feed.Parse(b)
@@ -253,7 +253,7 @@ func publish(args []string) int {
 	}
 	st, err := ui.FileStore{Path: sp}.Load()
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "mentions:", err)
+		fmt.Fprintln(os.Stderr, "hearsay:", err)
 		return 1
 	}
 	pub := f.Public(func(it *feed.Item) bool {
@@ -265,13 +265,13 @@ func publish(args []string) int {
 	})
 	enc, err := pub.Encode()
 	if err != nil {
-		fmt.Fprintln(os.Stderr, "mentions:", err)
+		fmt.Fprintln(os.Stderr, "hearsay:", err)
 		return 1
 	}
 	if *out == "-" {
 		os.Stdout.Write(enc)
 	} else if err := os.WriteFile(*out, enc, 0o644); err != nil {
-		fmt.Fprintln(os.Stderr, "mentions:", err)
+		fmt.Fprintln(os.Stderr, "hearsay:", err)
 		return 1
 	}
 	fmt.Fprintf(os.Stderr, "Wrote %d featured items of %d.\n", len(pub.Items), len(f.Items))

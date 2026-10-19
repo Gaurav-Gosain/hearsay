@@ -37,7 +37,7 @@ try {
   const url = `http://127.0.0.1:${port}/${query}`;
   const t0 = Date.now();
   await page.goto(url);
-  await page.waitForFunction(() => window.mentionsFirstFrame === true, null, { timeout: 60000 });
+  await page.waitForFunction(() => window.hearsayFirstFrame === true, null, { timeout: 60000 });
   console.log(`first frame after ${Date.now() - t0} ms`);
   await sleep(1600); // the intro animation
   await page.screenshot({ path: path.join(outdir, 'browser-start.png') });
@@ -67,12 +67,12 @@ try {
   const again = await context.newPage();
   again.on('pageerror', (e) => errors.push('pageerror: ' + e.message));
   await again.goto(url);
-  await again.waitForFunction(() => window.mentionsFirstFrame === true, null, { timeout: 60000 });
+  await again.waitForFunction(() => window.hearsayFirstFrame === true, null, { timeout: 60000 });
   await sleep(1600);
   const kept = await again.evaluate(() => {
     for (let i = 0; i < localStorage.length; i++) {
       const k = localStorage.key(i);
-      if (k.startsWith('mentions-state:')) {
+      if (k.startsWith('hearsay-state:')) {
         const items = JSON.parse(localStorage.getItem(k)).items || {};
         return Object.values(items).filter((v) => v.state === 'featured').length;
       }
@@ -89,7 +89,7 @@ try {
   const phone = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 3 });
   phone.on('pageerror', (e) => errors.push('phone pageerror: ' + e.message));
   await phone.goto(url);
-  await phone.waitForFunction(() => window.mentionsFirstFrame === true, null, { timeout: 60000 });
+  await phone.waitForFunction(() => window.hearsayFirstFrame === true, null, { timeout: 60000 });
   await sleep(1600);
   await phone.screenshot({ path: path.join(outdir, 'browser-phone.png') });
 

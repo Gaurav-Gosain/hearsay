@@ -1,4 +1,4 @@
-# mentions
+# hearsay
 
 A terminal viewer for the places your project is talked about: videos,
 posts, articles, issues, packages and more. It reads one JSON feed, shows it
@@ -31,13 +31,13 @@ At 100 by 30 cells the preview moves below the list:
 ## Install
 
 ```sh
-go install example.com/mentions-ui@latest
+go install github.com/Gaurav-Gosain/hearsay@latest
 ```
 
 Or build from a clone:
 
 ```sh
-go build -o mentions .
+go build -o hearsay .
 ```
 
 Use a font with Nerd Font glyphs, or pass `--ascii`.
@@ -45,22 +45,22 @@ Use a font with Nerd Font glyphs, or pass `--ascii`.
 ## Use
 
 ```sh
-mentions --demo                      # the bundled sample
-mentions mentions.json               # a feed file
-mentions https://example.com/m.json  # a feed URL
-mentions validate mentions.json      # check a feed
-mentions publish -o public.json mentions.json
+hearsay --demo                      # the bundled sample
+hearsay mentions.json               # a feed file
+hearsay https://example.com/m.json  # a feed URL
+hearsay validate mentions.json      # check a feed
+hearsay publish -o public.json mentions.json
 ```
 
 | Flag | What it does |
 | --- | --- |
-| `--state FILE` | The triage file. The default is `<feed>.state.json` next to a file feed, or a file under `~/.local/state/mentions/` for a URL. |
+| `--state FILE` | The triage file. The default is `<feed>.state.json` next to a file feed, or a file under `~/.local/state/hearsay/` for a URL. |
 | `--read-only` | Keep triage in memory. Write nothing. |
 | `--name`, `--subtitle` | Change the project name and the line under it. |
 | `--accent`, `--accent2` | Change the colours, as `#rrggbb`. |
-| `--ascii` | Use ASCII marks in place of Nerd Font glyphs. Also `MENTIONS_ASCII=1`. |
+| `--ascii` | Use ASCII marks in place of Nerd Font glyphs. Also `HEARSAY_ASCII=1`. |
 
-`MENTIONS_FEED` sets the feed when you give none.
+`HEARSAY_FEED` sets the feed when you give none.
 
 ### Keys
 
@@ -119,7 +119,7 @@ collector can rewrite the feed at any time.
 
 ## A public page
 
-`mentions publish` writes a feed with only the rows you featured. It drops
+`hearsay publish` writes a feed with only the rows you featured. It drops
 the relevance, the reasons, the file lists and the seen times. Put that file
 next to the browser build to show your project's mentions on a web page.
 
@@ -139,7 +139,7 @@ node wasm/serve.mjs dist 8765    # try it at http://127.0.0.1:8765
 - The page reads `mentions.json` next to it. `?feed=URL` reads another feed.
   `?demo` shows the demo.
 - Triage stays in the browser's local storage. Nothing goes back to a server.
-- Only `mentions.wasm.br` and `mentions.wasm.gz` ship, about 1.6 MB and 2.2 MB.
+- Only `hearsay.wasm.br` and `hearsay.wasm.gz` ship, about 1.6 MB and 2.2 MB.
   A host that cannot serve them with `Content-Encoding` makes the page unpack
   the gzip file itself.
 - `wasm/prepare.sh` patches a copy of Bubble Tea so it builds for js. It does

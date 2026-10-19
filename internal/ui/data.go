@@ -9,7 +9,7 @@ import (
 	"time"
 	"unicode"
 
-	"example.com/mentions-ui/feed"
+	"github.com/Gaurav-Gosain/hearsay/feed"
 )
 
 // Mention is one row of the list.

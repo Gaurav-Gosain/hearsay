@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"unicode"
 
-	"example.com/mentions-ui/feed"
+	"github.com/Gaurav-Gosain/hearsay/feed"
 )
 
 // Store keeps the triage state somewhere: a file, browser storage, or

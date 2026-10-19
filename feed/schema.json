@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "mentions-feed-v1.schema.json",
+  "$id": "https://github.com/Gaurav-Gosain/hearsay/blob/main/feed/schema.json",
   "title": "Mentions feed, version 1",
   "description": "The places a project is mentioned. See docs/feed.md.",
   "type": "object",

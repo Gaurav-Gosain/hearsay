@@ -4,16 +4,16 @@
 // terminal renderer and hands the feed text to the program before it starts.
 // Triage is kept in the browser's localStorage and nowhere else.
 //
-// The page API, all on one global object, `mentions`:
+// The page API, all on one global object, `hearsay`:
 //
-//	mentions.onOutput(fn)       fn(Uint8Array) gets the bytes for the terminal
-//	mentions.input(data)        keyboard and mouse bytes, a string or Uint8Array
-//	mentions.resize(cols, rows) the renderer's size in cells
+//	hearsay.onOutput(fn)       fn(Uint8Array) gets the bytes for the terminal
+//	hearsay.input(data)        keyboard and mouse bytes, a string or Uint8Array
+//	hearsay.resize(cols, rows) the renderer's size in cells
 //
 // Before go.run, the page sets:
 //
-//	window.mentionsFeedText     the feed JSON as a string, or "" for the demo
-//	window.mentionsInitialSize  [cols, rows]
+//	window.hearsayFeedText     the feed JSON as a string, or "" for the demo
+//	window.hearsayInitialSize  [cols, rows]
 package main
 
 import (
@@ -25,9 +25,9 @@ import (
 
 	tea "charm.land/bubbletea/v2"
 
-	"example.com/mentions-ui/feed"
-	"example.com/mentions-ui/internal/demo"
-	"example.com/mentions-ui/internal/ui"
+	"github.com/Gaurav-Gosain/hearsay/feed"
+	"github.com/Gaurav-Gosain/hearsay/internal/demo"
+	"github.com/Gaurav-Gosain/hearsay/internal/ui"
 )
 
 type bridge struct {
@@ -156,7 +156,7 @@ func main() {
 	_ = os.Setenv("CLICOLOR_FORCE", "1")
 
 	cols, rows := 120, 36
-	if v := js.Global().Get("mentionsInitialSize"); v.Truthy() {
+	if v := js.Global().Get("hearsayInitialSize"); v.Truthy() {
 		cols, rows = v.Index(0).Int(), v.Index(1).Int()
 	}
 
@@ -164,13 +164,13 @@ func main() {
 	var store ui.Store
 	note := "triage in this browser"
 	text := ""
-	if v := js.Global().Get("mentionsFeedText"); v.Type() == js.TypeString {
+	if v := js.Global().Get("hearsayFeedText"); v.Type() == js.TypeString {
 		text = v.String()
 	}
 	if text != "" {
 		parsed, err := feed.Parse([]byte(text))
 		if err != nil {
-			js.Global().Get("console").Call("error", "mentions: the feed is not valid: "+err.Error())
+			js.Global().Get("console").Call("error", "hearsay: the feed is not valid: "+err.Error())
 			text = ""
 		} else {
 			f = parsed
@@ -180,7 +180,7 @@ func main() {
 		f = demo.Feed(time.Now())
 		store, note = ui.MemoryStore{}, "demo"
 	} else {
-		store = localStore{key: "mentions-state:" + f.Project.Name}
+		store = localStore{key: "hearsay-state:" + f.Project.Name}
 	}
 	ui.SetColors(f.Project.Colors.Accent, f.Project.Colors.Accent2)
 	tri, err := ui.NewTriage(store)
@@ -252,14 +252,14 @@ func main() {
 		}
 		return nil
 	}))
-	js.Global().Set("mentions", api)
-	if ready := js.Global().Get("onMentionsReady"); ready.Type() == js.TypeFunction {
+	js.Global().Set("hearsay", api)
+	if ready := js.Global().Get("onHearsayReady"); ready.Type() == js.TypeFunction {
 		ready.Invoke(api)
 	}
 	if _, err := prog.Run(); err != nil {
-		js.Global().Get("console").Call("error", "mentions: "+err.Error())
+		js.Global().Get("console").Call("error", "hearsay: "+err.Error())
 	}
-	if done := js.Global().Get("onMentionsExit"); done.Type() == js.TypeFunction {
+	if done := js.Global().Get("onHearsayExit"); done.Type() == js.TypeFunction {
 		done.Invoke()
 	}
 }

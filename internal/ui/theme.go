@@ -4,7 +4,7 @@ import (
 	"sort"
 	"strings"
 
-	"example.com/mentions-ui/feed"
+	"github.com/Gaurav-Gosain/hearsay/feed"
 )
 
 // RGB is a 24-bit colour, 0xRRGGBB. Bubble Tea lowers it to 256 or 16

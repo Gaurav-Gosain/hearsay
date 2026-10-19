@@ -1,4 +1,4 @@
-module example.com/mentions-ui
+module github.com/Gaurav-Gosain/hearsay
 
 go 1.25.0
 

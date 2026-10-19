@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mentions</title>
+<title>hearsay</title>
 <link rel="stylesheet" href="xterm.css">
 <link rel="stylesheet" href="webterm.css">
 <style>
@@ -43,21 +43,24 @@ async function loadFeed() {
     const res = await fetch(url, { headers: { accept: 'application/json' } });
     if (!res.ok) return '';
     const text = await res.text();
-    JSON.parse(text);
+    const feed = JSON.parse(text);
+    if (feed.project && feed.project.name) {
+      document.title = feed.project.name + (feed.project.subtitle ? ' / ' + feed.project.subtitle : '');
+    }
     return text;
   } catch (err) {
-    console.warn('mentions: cannot read the feed, showing the demo', err);
+    console.warn('hearsay: cannot read the feed, showing the demo', err);
     return '';
   }
 }
 
-// A static host that cannot set Content-Encoding serves no mentions.wasm, so
+// A static host that cannot set Content-Encoding serves no hearsay.wasm, so
 // the page then fetches the gzip file and unpacks it itself.
 async function loadWasm(importObject) {
-  let res = await fetch('mentions.wasm');
+  let res = await fetch('hearsay.wasm');
   if (!res.ok) {
-    const gz = await fetch('mentions.wasm.gz');
-    if (!gz.ok) throw new Error('no mentions.wasm and no mentions.wasm.gz');
+    const gz = await fetch('hearsay.wasm.gz');
+    if (!gz.ok) throw new Error('no hearsay.wasm and no hearsay.wasm.gz');
     res = new Response(gz.body.pipeThrough(new DecompressionStream('gzip')),
       { headers: { 'content-type': 'application/wasm' } });
   }
@@ -88,16 +91,16 @@ function isReloadKey(e) {
   const go = new Go();
   const [wasm, feedText] = await Promise.all([loadWasm(go.importObject), loadFeed(), term.open(document.getElementById('terminal'))]);
   window.webterm = term;
-  window.mentionsFeedText = feedText;
-  window.mentionsInitialSize = [term.cols, term.rows];
-  window.onMentionsReady = (api) => {
+  window.hearsayFeedText = feedText;
+  window.hearsayInitialSize = [term.cols, term.rows];
+  window.onHearsayReady = (api) => {
     let first = true;
     api.onOutput((bytes) => {
       if (first) {
         first = false;
         requestAnimationFrame(() => requestAnimationFrame(() => {
           boot.classList.add('gone');
-          window.mentionsFirstFrame = true;
+          window.hearsayFirstFrame = true;
         }));
       }
       term.write(bytes);
@@ -108,7 +111,7 @@ function isReloadKey(e) {
     api.resize(term.cols, term.rows);
     term.focus();
   };
-  window.onMentionsExit = () => {
+  window.onHearsayExit = () => {
     boot.textContent = 'The viewer stopped. Reload the page to start it again.';
     boot.classList.remove('gone');
   };

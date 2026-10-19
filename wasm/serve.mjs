@@ -1,7 +1,7 @@
 // A static server for trying the browser build locally, the way a static
 // site serves it: a request for a file gets its .br or .gz twin
 // with Content-Encoding when the browser accepts one, and the twin is enough
-// on its own, so mentions.wasm works with only mentions.wasm.br and .gz on disk.
+// on its own, so hearsay.wasm works with only hearsay.wasm.br and .gz on disk.
 //
 // Usage: node wasm/serve.mjs <dir> [port]
 import http from 'node:http';
