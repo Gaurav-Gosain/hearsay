@@ -1,0 +1,6 @@
+/mentions
+/.dev/
+/.wasm-build/
+/dist/
+/.dist-*/
+*.state.json

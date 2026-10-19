@@ -1,0 +1,1674 @@
+{
+  "version": 1,
+  "project": {
+    "name": "lumen",
+    "subtitle": "in the wild",
+    "url": "https://example.com/lumen",
+    "colors": {
+      "accent": "#7c6cff",
+      "accent2": "#f08bd0"
+    }
+  },
+  "generated": "2026-06-01T12:00:00Z",
+  "items": [
+    {
+      "id": "387a333657ed59f0",
+      "source": "x",
+      "kind": "reply",
+      "url": "https://example.org/x/reply/00040",
+      "title": "Bookmarking lumen for the weekend",
+      "author": "@copperleaf",
+      "published": "2026-05-31T14:58:30Z",
+      "excerpt": "Bookmarking lumen for the weekend. Config below.",
+      "metrics": {
+        "likes": 124,
+        "replies": 10,
+        "reposts": 2,
+        "views": 5131
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "54eeaa3d39bd134f",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00042",
+      "title": "lumen's keyboard map is the best part, everything is one key away",
+      "author": "@lowtide",
+      "published": "2026-05-31T14:57:44Z",
+      "excerpt": "lumen's keyboard map is the best part, everything is one key away. ",
+      "metrics": {
+        "likes": 102,
+        "replies": 6,
+        "reposts": 20,
+        "views": 5281
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "9beb652ea52daad2",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00018",
+      "title": "Small thing, but the lumen clock font is lovely",
+      "author": "@orchardloop",
+      "published": "2026-05-31T14:09:08Z",
+      "excerpt": "Small thing, but the lumen clock font is lovely. Highly recommend.",
+      "metrics": {
+        "likes": 48,
+        "replies": 4,
+        "reposts": 7,
+        "views": 2272
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "55d0a121aba725c1",
+      "source": "github",
+      "kind": "code",
+      "group": "dotfiles",
+      "url": "https://example.com/sablefin/dots",
+      "title": "sablefin/dots",
+      "author": "sablefin",
+      "published": "2026-05-31T03:08:18Z",
+      "files": [
+        ".config/lumen/config.toml",
+        ".config/lumen/widgets/clock.toml",
+        "install.sh"
+      ],
+      "relevance": "likely"
+    },
+    {
+      "id": "f1c6387a5a77617a",
+      "source": "hackernews",
+      "kind": "comment",
+      "url": "https://example.org/hackernews/comment/00033",
+      "title": "Three weeks with lumen on my work laptop. Short review in the thread",
+      "author": "ravenmoss",
+      "published": "2026-05-31T02:25:30Z",
+      "excerpt": "Three weeks with lumen on my work laptop. Short review in the thread. Highly recommend.",
+      "metrics": {
+        "comments": 27,
+        "points": 197
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "4f9d1f22f46aaed5",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00012",
+      "title": "lumen's keyboard map is the best part, everything is one key away",
+      "author": "@cindertrail",
+      "published": "2026-05-30T12:46:11Z",
+      "excerpt": "lumen's keyboard map is the best part, everything is one key away. Screenshots in the thread.",
+      "metrics": {
+        "likes": 94,
+        "replies": 7,
+        "reposts": 15,
+        "views": 11631
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "1aecc61ef44d2ff7",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/fogline/awesome-tui/pr/77",
+      "title": "fogline/awesome-tui: nix: add lumen module",
+      "author": "fogline",
+      "published": "2026-05-30T10:29:34Z",
+      "metrics": {
+        "comments": 8,
+        "reactions": 8
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "5df29a22f8da8a28",
+      "source": "lemmy",
+      "kind": "post",
+      "url": "https://example.org/lemmy/post/00031",
+      "title": "Shipping a lumen theme pack this week",
+      "author": "thistle_dev",
+      "published": "2026-05-29T22:37:53Z",
+      "excerpt": "Shipping a lumen theme pack this week. Highly recommend.",
+      "metrics": {
+        "comments": 55,
+        "points": 11
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "937201a604323af9",
+      "source": "registry",
+      "kind": "package",
+      "url": "https://example.org/packages/lumen",
+      "title": "lumen on the package index",
+      "author": "package index",
+      "published": "2026-05-29T21:51:36Z",
+      "metrics": {
+        "installs_30d": 2140,
+        "installs_90d": 5302
+      }
+    },
+    {
+      "id": "3921eb4aabd31db1",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/bluesky/post/00026",
+      "title": "lumen just saved me from missing a failing deploy",
+      "author": "@brambleworks",
+      "published": "2026-05-29T15:34:40Z",
+      "excerpt": "lumen just saved me from missing a failing deploy. ",
+      "metrics": {
+        "likes": 27,
+        "replies": 4,
+        "reposts": 2
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "550074e4aaa3e6a0",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00035",
+      "title": "Finally a dashboard that respects my colour scheme",
+      "author": "@fogline",
+      "published": "2026-05-29T14:40:47Z",
+      "excerpt": "Finally a dashboard that respects my colour scheme. Highly recommend.",
+      "metrics": {
+        "likes": 85,
+        "replies": 10,
+        "reposts": 19,
+        "views": 7092
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "be9b994e99b22a80",
+      "source": "hackernews",
+      "kind": "comment",
+      "url": "https://example.org/hackernews/comment/00022",
+      "title": "Tried lumen today. The defaults are good enough that I barely changed anything",
+      "author": "copperleaf",
+      "published": "2026-05-29T09:25:21Z",
+      "excerpt": "Tried lumen today. The defaults are good enough that I barely changed anything. Config below.",
+      "metrics": {
+        "comments": 50,
+        "points": 166
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "c297704e2d01b1b6",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/bluesky/post/00037",
+      "title": "My lumen config is now 12 lines long and does everything I need",
+      "author": "@marrowlight",
+      "published": "2026-05-29T03:08:21Z",
+      "excerpt": "My lumen config is now 12 lines long and does everything I need. Screenshots in the thread.",
+      "metrics": {
+        "likes": 67,
+        "replies": 4,
+        "reposts": 5
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "f8d31c26ef285e0f",
+      "source": "hackernews",
+      "kind": "comment",
+      "url": "https://example.org/hackernews/comment/00036",
+      "title": "lumen and a cup of tea: my morning standup view",
+      "author": "sablefin",
+      "published": "2026-05-28T19:50:23Z",
+      "excerpt": "lumen and a cup of tea: my morning standup view. Config below.",
+      "metrics": {
+        "comments": 42,
+        "points": 81
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "17b18f640adc5c7d",
+      "source": "reddit",
+      "kind": "post",
+      "url": "https://example.org/noise/95",
+      "title": "lumen of the room was perfect",
+      "author": "copperleaf",
+      "published": "2026-05-28T15:57:47Z",
+      "relevance": "noise",
+      "reason": "the word lumen, not the project"
+    },
+    {
+      "id": "f86bd4f05d1cf939",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0006",
+      "title": "Building a lumen widget from scratch",
+      "author": "Code by Candlelight",
+      "published": "2026-05-27T22:41:28Z",
+      "excerpt": "A walk through clocks, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 64,
+        "likes": 56,
+        "views": 1993
+      }
+    },
+    {
+      "id": "979c0945f324c74c",
+      "source": "x",
+      "kind": "reply",
+      "url": "https://example.org/x/reply/00038",
+      "title": "Ported my conky setup to lumen in an evening",
+      "author": "@mossbyte",
+      "published": "2026-05-26T19:57:37Z",
+      "excerpt": "Ported my conky setup to lumen in an evening. Highly recommend.",
+      "metrics": {
+        "likes": 120,
+        "replies": 3,
+        "reposts": 16,
+        "views": 5729
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "e5d3cd1637e5edc9",
+      "source": "web",
+      "kind": "article",
+      "url": "https://example.net/articles/060",
+      "title": "lumen and the case for small tools",
+      "author": "Small Tools Review",
+      "published": "2026-05-26T17:16:51Z",
+      "excerpt": "A long read about widgets and why small tools win.",
+      "reason": "links the project page"
+    },
+    {
+      "id": "055b61a158cc5a0a",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/inkwell/weekly/pr/76",
+      "title": "inkwell/weekly: docs: mention lumen in the README",
+      "author": "inkwell",
+      "published": "2026-05-26T13:11:46Z",
+      "metrics": {
+        "comments": 12,
+        "reactions": 8
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "51f6a074cdffaee8",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/copperleaf/dotfiles/pr/70",
+      "title": "copperleaf/dotfiles: lumen: 0.9.1 -\u003e 1.0.0",
+      "author": "copperleaf",
+      "published": "2026-05-26T11:17:43Z",
+      "metrics": {
+        "comments": 5,
+        "reactions": 9
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "46f98f8bec007822",
+      "source": "web",
+      "kind": "directory",
+      "url": "https://example.net/directory/lumen",
+      "title": "lumen on The Tool Shelf",
+      "author": "The Tool Shelf",
+      "published": "2026-05-26T02:48:50Z"
+    },
+    {
+      "id": "17324671783524da",
+      "source": "stackexchange",
+      "kind": "question",
+      "url": "https://example.org/stackexchange/question/00041",
+      "title": "How do I make a lumen status line update every second?",
+      "author": "thistle_dev",
+      "published": "2026-05-25T16:20:40Z",
+      "excerpt": "Spent the evening theming lumen. Worth it.. Config below.",
+      "metrics": {
+        "score": 7,
+        "views": 479
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "b697f7c770fe3949",
+      "source": "lemmy",
+      "kind": "post",
+      "url": "https://example.org/lemmy/post/00017",
+      "title": "The lumen docs are short and that is a compliment",
+      "author": "brambleworks",
+      "published": "2026-05-25T13:01:33Z",
+      "excerpt": "The lumen docs are short and that is a compliment. Highly recommend.",
+      "metrics": {
+        "comments": 48,
+        "points": 39
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "12ca1c4edf988342",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/brambleworks/workstation/pr/69",
+      "title": "brambleworks/workstation: Add lumen to awesome list",
+      "author": "brambleworks",
+      "published": "2026-05-25T07:54:27Z",
+      "metrics": {
+        "comments": 4,
+        "reactions": 1
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "91a487fb37c73cd9",
+      "source": "stackexchange",
+      "kind": "question",
+      "url": "https://example.org/stackexchange/question/00046",
+      "title": "How do I make a lumen status line update every second?",
+      "author": "nightjar",
+      "published": "2026-05-24T19:10:58Z",
+      "excerpt": "Anyone else running lumen on a Raspberry Pi? Works great here. Screenshots in the thread.",
+      "metrics": {
+        "score": 2,
+        "views": 109
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "3340f21a48b92c22",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0002",
+      "title": "I replaced my status bar with lumen",
+      "author": "Byte Garden",
+      "published": "2026-05-23T21:52:20Z",
+      "excerpt": "A walk through clocks, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 83,
+        "likes": 197,
+        "views": 5918
+      }
+    },
+    {
+      "id": "a27cb93d069b1891",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0005",
+      "title": "Five terminal tools I use every day (lumen is #1)",
+      "author": "The Quiet Shell",
+      "published": "2026-05-23T14:21:02Z",
+      "excerpt": "A walk through status lines, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 26,
+        "likes": 111,
+        "views": 4455
+      }
+    },
+    {
+      "id": "0f8ad5b2ffd9c9fe",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/sablefin/dots/issue/87",
+      "title": "sablefin/dots: Support lumen themes in the installer",
+      "author": "sablefin",
+      "published": "2026-05-23T09:11:37Z",
+      "metrics": {
+        "comments": 13,
+        "reactions": 3
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "2136526029cf4d55",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00028",
+      "title": "lumen made me delete four shell scripts",
+      "author": "@kitefield",
+      "published": "2026-05-23T03:33:04Z",
+      "excerpt": "lumen made me delete four shell scripts. Highly recommend.",
+      "metrics": {
+        "likes": 3,
+        "replies": 11,
+        "reposts": 19,
+        "views": 7946
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "a77ed47be852caf5",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0007",
+      "title": "lumen vs. three other dashboards",
+      "author": "Terminal Tuesdays",
+      "published": "2026-05-22T23:37:51Z",
+      "excerpt": "A walk through clocks, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 14,
+        "likes": 62,
+        "views": 2857
+      }
+    },
+    {
+      "id": "d7b5ca13b2a0bd21",
+      "source": "x",
+      "kind": "reply",
+      "url": "https://example.org/x/reply/00030",
+      "title": "Any lumen users on FreeBSD? Curious how it runs there",
+      "author": "@pixelfern",
+      "published": "2026-05-22T08:57:40Z",
+      "excerpt": "Any lumen users on FreeBSD? Curious how it runs there. ",
+      "metrics": {
+        "likes": 106,
+        "replies": 6,
+        "reposts": 7,
+        "views": 11980
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "b3b48b40faafb010",
+      "source": "github",
+      "kind": "repo",
+      "url": "https://example.com/saltmarsh/lumen-themes",
+      "title": "saltmarsh/lumen-themes: Themes for lumen",
+      "author": "saltmarsh",
+      "published": "2026-05-21T19:11:03Z",
+      "metrics": {
+        "forks": 29,
+        "stars": 261
+      }
+    },
+    {
+      "id": "3bd59a99a3c134cc",
+      "source": "stackexchange",
+      "kind": "question",
+      "url": "https://example.org/stackexchange/question/00045",
+      "title": "How do I make a lumen plugin update every second?",
+      "author": "nightjar",
+      "published": "2026-05-21T18:46:23Z",
+      "excerpt": "Opened my first PR to lumen today, the maintainers were kind. Screenshots in the thread.",
+      "metrics": {
+        "score": 6,
+        "views": 703
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "cf63dd3660ece9c2",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/copperleaf/dotfiles/issue/78",
+      "title": "copperleaf/dotfiles: Document how to run under lumen",
+      "author": "copperleaf",
+      "published": "2026-05-21T15:33:36Z",
+      "metrics": {
+        "comments": 9,
+        "reactions": 3
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "977cb10173d79d07",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/nightjar/homelab/issue/83",
+      "title": "nightjar/homelab: Document how to run under lumen",
+      "author": "nightjar",
+      "published": "2026-05-21T14:23:11Z",
+      "metrics": {
+        "comments": 12,
+        "reactions": 2
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "78b1076c6aea5f7e",
+      "source": "reddit",
+      "kind": "post",
+      "url": "https://example.org/noise/93",
+      "title": "the lumen count on this bulb is wrong",
+      "author": "inkwell_io",
+      "published": "2026-05-20T22:40:05Z",
+      "relevance": "noise",
+      "reason": "the word lumen, not the project"
+    },
+    {
+      "id": "74b2366baf75fbd9",
+      "source": "github",
+      "kind": "code",
+      "group": "dotfiles",
+      "url": "https://example.com/thistle/arch-setup",
+      "title": "thistle/arch-setup",
+      "author": "thistle",
+      "published": "2026-05-20T17:43:44Z",
+      "files": [
+        ".config/lumen/config.toml"
+      ],
+      "relevance": "likely"
+    },
+    {
+      "id": "fa155f522a469dbb",
+      "source": "github",
+      "kind": "repo",
+      "url": "https://example.com/glintwire/lumen-widgets",
+      "title": "glintwire/lumen-widgets: A pack of lumen widgets",
+      "author": "glintwire",
+      "published": "2026-05-20T00:10:45Z",
+      "metrics": {
+        "forks": 10,
+        "stars": 148
+      }
+    },
+    {
+      "id": "0538c52cd49c999d",
+      "source": "web",
+      "kind": "newsletter",
+      "url": "https://example.net/newsletter/issue-42",
+      "title": "Small Tools Weekly #42",
+      "author": "Small Tools Weekly",
+      "published": "2026-05-19T08:56:04Z",
+      "excerpt": "This week: lumen 1.0, a new tiling layout, and more."
+    },
+    {
+      "id": "6374911becdb7d1a",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/noise/96",
+      "title": "lumen of the room was perfect",
+      "author": "hollowpine",
+      "published": "2026-05-18T09:36:01Z",
+      "relevance": "noise",
+      "reason": "the word lumen, not the project"
+    },
+    {
+      "id": "f309fadee5fbf43e",
+      "source": "lemmy",
+      "kind": "post",
+      "url": "https://example.org/lemmy/post/00056",
+      "title": "lumen just saved me from missing a failing deploy",
+      "author": "duskhollow",
+      "published": "2026-05-18T03:18:48Z",
+      "excerpt": "lumen just saved me from missing a failing deploy. Highly recommend.",
+      "metrics": {
+        "comments": 33,
+        "points": 169
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "aedcc02f3f67004e",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/pixelfern/dotfiles/pr/65",
+      "title": "pixelfern/dotfiles: feat: add lumen config",
+      "author": "pixelfern",
+      "published": "2026-05-17T19:27:28Z",
+      "metrics": {
+        "comments": 9,
+        "reactions": 9
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "f6e57812f9bd4403",
+      "source": "github",
+      "kind": "discussion",
+      "url": "https://example.com/quietkernel/config/discussion/84",
+      "title": "quietkernel/config: Crash when lumen resizes quickly",
+      "author": "quietkernel",
+      "published": "2026-05-15T07:38:53Z",
+      "metrics": {
+        "comments": 0,
+        "reactions": 4
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "7610bfb69d93ebf4",
+      "source": "lemmy",
+      "kind": "post",
+      "url": "https://example.org/lemmy/post/00034",
+      "title": "Is there a way to make lumen show my calendar? asking for a friend",
+      "author": "nightjar",
+      "published": "2026-05-14T03:17:14Z",
+      "excerpt": "Is there a way to make lumen show my calendar? asking for a friend. Highly recommend.",
+      "metrics": {
+        "comments": 48,
+        "points": 207
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "8a364001ae226ab8",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/copperleaf/dotfiles/pr/66",
+      "title": "copperleaf/dotfiles: docs: mention lumen in the README",
+      "author": "copperleaf",
+      "published": "2026-05-13T17:46:26Z",
+      "metrics": {
+        "comments": 11,
+        "reactions": 0
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "957d456e7fd2a3e8",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0001",
+      "title": "lumen in 100 seconds",
+      "author": "Byte Garden",
+      "published": "2026-05-11T09:24:41Z",
+      "excerpt": "A walk through themes, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 30,
+        "likes": 1302,
+        "views": 48210
+      },
+      "state": "featured"
+    },
+    {
+      "id": "2d42d00eb164546e",
+      "source": "github",
+      "kind": "repo",
+      "url": "https://example.com/kitefield/lumen-weather",
+      "title": "kitefield/lumen-weather: Weather for lumen",
+      "author": "kitefield",
+      "published": "2026-05-11T07:08:10Z",
+      "metrics": {
+        "forks": 27,
+        "stars": 274
+      }
+    },
+    {
+      "id": "833ebd2de8cc3652",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/bluesky/post/00044",
+      "title": "lumen is the first terminal dashboard that does not get in my way",
+      "author": "@lowtide",
+      "published": "2026-05-10T03:55:10Z",
+      "excerpt": "lumen is the first terminal dashboard that does not get in my way. Highly recommend.",
+      "metrics": {
+        "likes": 86,
+        "replies": 0,
+        "reposts": 14
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "908d4689097f7629",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0010",
+      "title": "Live: setting up lumen on a fresh laptop",
+      "author": "Shell Shock Studio",
+      "published": "2026-05-09T17:31:16Z",
+      "excerpt": "A walk through widgets, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 70,
+        "likes": 92,
+        "views": 5435
+      }
+    },
+    {
+      "id": "e33152ec38bea7a0",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0008",
+      "title": "Ricing my terminal with lumen",
+      "author": "Small Tools Weekly",
+      "published": "2026-05-08T03:33:01Z",
+      "excerpt": "A walk through plugins, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 76,
+        "likes": 14,
+        "views": 535
+      }
+    },
+    {
+      "id": "1a96cd78ca4e6b9e",
+      "source": "github",
+      "kind": "repo",
+      "url": "https://example.com/lowtide/lumen.nvim",
+      "title": "lowtide/lumen.nvim: lumen inside your editor",
+      "author": "lowtide",
+      "published": "2026-05-06T15:22:20Z",
+      "metrics": {
+        "forks": 22,
+        "stars": 298
+      }
+    },
+    {
+      "id": "83e218f3caec7799",
+      "source": "stackexchange",
+      "kind": "question",
+      "url": "https://example.org/stackexchange/question/00013",
+      "title": "How do I make a lumen layout update every second?",
+      "author": "orchardloop",
+      "published": "2026-05-06T13:27:01Z",
+      "excerpt": "lumen idles at almost no CPU, which matters on this old machine. ",
+      "metrics": {
+        "score": 8,
+        "views": 768
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context",
+      "state": "featured"
+    },
+    {
+      "id": "e3e5e32d3d36db31",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00029",
+      "title": "Put lumen on the wall monitor in the office. People keep asking about it",
+      "author": "@brambleworks",
+      "published": "2026-05-05T04:28:13Z",
+      "excerpt": "Put lumen on the wall monitor in the office. People keep asking about it. ",
+      "metrics": {
+        "likes": 53,
+        "replies": 12,
+        "reposts": 10,
+        "views": 6809
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "4faf7320bb2c75bd",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/noise/92",
+      "title": "lumen means light, right?",
+      "author": "mossbyte",
+      "published": "2026-05-04T23:51:27Z",
+      "relevance": "noise",
+      "reason": "the word lumen, not the project"
+    },
+    {
+      "id": "e87af4e281b0c425",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/brambleworks/workstation/issue/73",
+      "title": "brambleworks/workstation: Add lumen to the list of supported dashboards",
+      "author": "brambleworks",
+      "published": "2026-05-04T21:04:54Z",
+      "metrics": {
+        "comments": 12,
+        "reactions": 8
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "aa10f75ff0ec77e8",
+      "source": "reddit",
+      "kind": "post",
+      "url": "https://example.org/reddit/post/00052",
+      "title": "Tried lumen today. The defaults are good enough that I barely changed anything",
+      "author": "pixelfern",
+      "published": "2026-05-04T09:29:44Z",
+      "excerpt": "Tried lumen today. The defaults are good enough that I barely changed anything. Config below.",
+      "metrics": {
+        "comments": 23,
+        "points": 85
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "105de4131277dad3",
+      "source": "mastodon",
+      "kind": "post",
+      "url": "https://example.org/mastodon/post/00032",
+      "title": "Recorded a short clip of my lumen layout, link below",
+      "author": "@stillwater",
+      "published": "2026-05-04T03:48:00Z",
+      "excerpt": "Recorded a short clip of my lumen layout, link below. ",
+      "metrics": {
+        "likes": 18,
+        "replies": 3,
+        "reposts": 1
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "b5c8ef7f9ab395c6",
+      "source": "github",
+      "kind": "code",
+      "group": "dotfiles",
+      "url": "https://example.com/mossbyte/nix-config",
+      "title": "mossbyte/nix-config",
+      "author": "mossbyte",
+      "published": "2026-05-04T00:34:05Z",
+      "files": [
+        ".config/lumen/config.toml"
+      ],
+      "relevance": "likely"
+    },
+    {
+      "id": "bc48ba56e71baaf2",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/sablefin/dots/issue/71",
+      "title": "sablefin/dots: Crash when lumen resizes quickly",
+      "author": "sablefin",
+      "published": "2026-05-02T12:37:13Z",
+      "metrics": {
+        "comments": 11,
+        "reactions": 6
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "e0130cf24f786b3e",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0004",
+      "title": "lumen first look: widgets, themes and a clock",
+      "author": "Dotfile Diaries",
+      "published": "2026-04-30T07:22:53Z",
+      "excerpt": "A walk through themes, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 13,
+        "likes": 91,
+        "views": 4393
+      }
+    },
+    {
+      "id": "d1d9542130f148fa",
+      "source": "reddit",
+      "kind": "post",
+      "url": "https://example.org/reddit/post/00014",
+      "title": "lumen is the first terminal dashboard that does not get in my way",
+      "author": "kitefield",
+      "published": "2026-04-30T04:17:12Z",
+      "excerpt": "lumen is the first terminal dashboard that does not get in my way. Highly recommend.",
+      "metrics": {
+        "comments": 5,
+        "points": 60
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "98eabba57d7f1dfa",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00049",
+      "title": "New blog post: how I use lumen to watch my builds",
+      "author": "@thistle_dev",
+      "published": "2026-04-29T01:58:11Z",
+      "excerpt": "New blog post: how I use lumen to watch my builds. Config below.",
+      "metrics": {
+        "likes": 133,
+        "replies": 11,
+        "reposts": 1,
+        "views": 11521
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "220f6a113aef86f1",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/fogline/awesome-tui/issue/81",
+      "title": "fogline/awesome-tui: Add a lumen widget to the status line",
+      "author": "fogline",
+      "published": "2026-04-28T09:46:39Z",
+      "metrics": {
+        "comments": 13,
+        "reactions": 6
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "6acdd95a12ec7947",
+      "source": "hackernews",
+      "kind": "comment",
+      "url": "https://example.org/hackernews/comment/00027",
+      "title": "Wrote a lumen widget for my weather station",
+      "author": "glintwire",
+      "published": "2026-04-27T21:24:58Z",
+      "excerpt": "Wrote a lumen widget for my weather station. Screenshots in the thread.",
+      "metrics": {
+        "comments": 23,
+        "points": 218
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "1643192738710944",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0003",
+      "title": "A calm terminal dashboard: lumen",
+      "author": "Shell Shock Studio",
+      "published": "2026-04-27T00:51:32Z",
+      "excerpt": "A walk through status lines, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 112,
+        "likes": 37,
+        "views": 1920
+      },
+      "state": "featured"
+    },
+    {
+      "id": "53701c319d52ac02",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/bluesky/post/00015",
+      "title": "Opened my first PR to lumen today, the maintainers were kind",
+      "author": "@quietkernel",
+      "published": "2026-04-26T07:43:31Z",
+      "excerpt": "Opened my first PR to lumen today, the maintainers were kind. Config below.",
+      "metrics": {
+        "likes": 15,
+        "replies": 2,
+        "reposts": 6
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "35621d41d99031c4",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/nightjar/homelab/issue/82",
+      "title": "nightjar/homelab: Add lumen to the list of supported dashboards",
+      "author": "nightjar",
+      "published": "2026-04-24T02:52:25Z",
+      "metrics": {
+        "comments": 12,
+        "reactions": 5
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "46b91f5e6b1025f2",
+      "source": "x",
+      "kind": "reply",
+      "url": "https://example.org/x/reply/00039",
+      "title": "Switched from my old status script to lumen, never going back",
+      "author": "@hollowpine",
+      "published": "2026-04-21T09:30:17Z",
+      "excerpt": "Switched from my old status script to lumen, never going back. Config below.",
+      "metrics": {
+        "likes": 137,
+        "replies": 10,
+        "reposts": 15,
+        "views": 8607
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "df18aaecd9f7f5c7",
+      "source": "reddit",
+      "kind": "comment",
+      "url": "https://example.org/reddit/comment/00053",
+      "title": "Today I learned lumen can read a feed of my CI runs",
+      "author": "stillwater",
+      "published": "2026-04-21T04:01:15Z",
+      "excerpt": "Today I learned lumen can read a feed of my CI runs. Screenshots in the thread.",
+      "metrics": {
+        "comments": 2,
+        "points": 107
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "0ca6a10e04de5422",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00047",
+      "title": "The lumen docs are short and that is a compliment",
+      "author": "@fogline",
+      "published": "2026-04-20T10:59:36Z",
+      "excerpt": "The lumen docs are short and that is a compliment. ",
+      "metrics": {
+        "likes": 7,
+        "replies": 1,
+        "reposts": 17,
+        "views": 1372
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "5a75fa9dc4ecfac4",
+      "source": "hackernews",
+      "kind": "comment",
+      "url": "https://example.org/hackernews/comment/00055",
+      "title": "lumen 1.0 just landed and the clock widget alone sells it",
+      "author": "stillwater",
+      "published": "2026-04-18T22:19:51Z",
+      "excerpt": "lumen 1.0 just landed and the clock widget alone sells it. ",
+      "metrics": {
+        "comments": 54,
+        "points": 113
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "5316211993626b63",
+      "source": "x",
+      "kind": "reply",
+      "url": "https://example.org/x/reply/00021",
+      "title": "lumen + a tiling WM = a very quiet desk",
+      "author": "@mossbyte",
+      "published": "2026-04-18T18:27:14Z",
+      "excerpt": "lumen + a tiling WM = a very quiet desk. Highly recommend.",
+      "metrics": {
+        "likes": 74,
+        "replies": 11,
+        "reposts": 17,
+        "views": 10956
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "2a0ba303c6087be8",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/noise/91",
+      "title": "the lumen count on this bulb is wrong",
+      "author": "thistle_dev",
+      "published": "2026-04-18T04:40:10Z",
+      "relevance": "noise",
+      "reason": "the word lumen, not the project"
+    },
+    {
+      "id": "6488d7724b5dc8fd",
+      "source": "github",
+      "kind": "code",
+      "group": "dotfiles",
+      "url": "https://example.com/pixelfern/dotfiles",
+      "title": "pixelfern/dotfiles",
+      "author": "pixelfern",
+      "published": "2026-04-17T11:13:13Z",
+      "files": [
+        ".config/lumen/config.toml"
+      ],
+      "relevance": "likely"
+    },
+    {
+      "id": "2e34e6706da29311",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/quietkernel/config/issue/79",
+      "title": "quietkernel/config: Integrate with lumen's widget protocol",
+      "author": "quietkernel",
+      "published": "2026-04-17T04:50:59Z",
+      "metrics": {
+        "comments": 12,
+        "reactions": 3
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "b881de2b6535022f",
+      "source": "lemmy",
+      "kind": "post",
+      "url": "https://example.org/lemmy/post/00050",
+      "title": "The lumen config format is so pleasant to write",
+      "author": "brambleworks",
+      "published": "2026-04-15T18:03:31Z",
+      "excerpt": "The lumen config format is so pleasant to write. Screenshots in the thread.",
+      "metrics": {
+        "comments": 6,
+        "points": 54
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "b0b45ac492795e7b",
+      "source": "stackexchange",
+      "kind": "question",
+      "url": "https://example.org/stackexchange/question/00023",
+      "title": "How do I make a lumen config update every second?",
+      "author": "saltmarsh",
+      "published": "2026-04-15T04:10:31Z",
+      "excerpt": "Today I learned lumen can read a feed of my CI runs. Screenshots in the thread.",
+      "metrics": {
+        "score": 7,
+        "views": 479
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "91f44cd5cfde32ea",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/fogline/awesome-tui/pr/68",
+      "title": "fogline/awesome-tui: lumen: 0.9.1 -\u003e 1.0.0",
+      "author": "fogline",
+      "published": "2026-04-13T23:31:46Z",
+      "metrics": {
+        "comments": 3,
+        "reactions": 5
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "96b9a29b2cda67b4",
+      "source": "github",
+      "kind": "code",
+      "group": "dotfiles",
+      "url": "https://example.com/emberwake/.config",
+      "title": "emberwake/.config",
+      "author": "emberwake",
+      "published": "2026-04-13T10:00:39Z",
+      "files": [
+        ".config/lumen/config.toml"
+      ],
+      "relevance": "likely"
+    },
+    {
+      "id": "19e01c0d1677834f",
+      "source": "github",
+      "kind": "code",
+      "group": "lists",
+      "url": "https://example.com/inkwell/weekly/README.md",
+      "title": "inkwell/weekly",
+      "author": "inkwell",
+      "published": "2026-04-12T09:18:18Z",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "id": "2a77a0de46abf675",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/bluesky/post/00048",
+      "title": "Small thing, but the lumen clock font is lovely",
+      "author": "@pixelfern",
+      "published": "2026-04-12T04:10:09Z",
+      "excerpt": "Small thing, but the lumen clock font is lovely. Config below.",
+      "metrics": {
+        "likes": 68,
+        "replies": 4,
+        "reposts": 13
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "da82f8735c2247e1",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00011",
+      "title": "Spent the evening theming lumen. Worth it.",
+      "author": "@glintwire",
+      "published": "2026-04-11T02:00:54Z",
+      "excerpt": "Spent the evening theming lumen. Worth it.. Config below.",
+      "metrics": {
+        "likes": 125,
+        "replies": 8,
+        "reposts": 15,
+        "views": 3294
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "41162cd34faa36f5",
+      "source": "github",
+      "kind": "discussion",
+      "url": "https://example.com/inkwell/weekly/discussion/90",
+      "title": "inkwell/weekly: Integrate with lumen's widget protocol",
+      "author": "inkwell",
+      "published": "2026-04-09T18:01:16Z",
+      "metrics": {
+        "comments": 0,
+        "reactions": 0
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "02d08bc73cd38b03",
+      "source": "web",
+      "kind": "article",
+      "url": "https://example.net/articles/059",
+      "title": "A quiet desk: living in lumen for a month",
+      "author": "The Tiling Desk",
+      "published": "2026-04-09T00:34:27Z",
+      "excerpt": "A long read about themes and why small tools win.",
+      "reason": "links the project page"
+    },
+    {
+      "id": "93809772e9f85bfa",
+      "source": "youtube",
+      "kind": "video",
+      "url": "https://example.com/video/0009",
+      "title": "lumen 1.0 is out: what changed",
+      "author": "Terminal Tuesdays",
+      "published": "2026-04-08T04:27:00Z",
+      "excerpt": "A walk through clocks, themes and the keys you need on day one.",
+      "metrics": {
+        "comments": 73,
+        "likes": 113,
+        "views": 4660
+      }
+    },
+    {
+      "id": "0321eef8420cd943",
+      "source": "hackernews",
+      "kind": "comment",
+      "url": "https://example.org/hackernews/comment/00051",
+      "title": "lumen + a tiling WM = a very quiet desk",
+      "author": "inkwell_io",
+      "published": "2026-04-05T20:41:02Z",
+      "excerpt": "lumen + a tiling WM = a very quiet desk. ",
+      "metrics": {
+        "comments": 24,
+        "points": 145
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "3ed62dcce9c327cd",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/mossbyte/nix-config/pr/67",
+      "title": "mossbyte/nix-config: Add lumen to awesome list",
+      "author": "update-bot",
+      "published": "2026-04-05T17:00:22Z",
+      "metrics": {
+        "comments": 6,
+        "reactions": 4
+      },
+      "relevance": "automation",
+      "reason": "a bot bumps a version"
+    },
+    {
+      "id": "2289fc12db5abfeb",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/mossbyte/nix-config/pr/88",
+      "title": "mossbyte/nix-config: chore: update lumen to 1.0.2",
+      "author": "mossbyte",
+      "published": "2026-04-04T09:12:06Z",
+      "metrics": {
+        "comments": 7,
+        "reactions": 2
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "f01fdec368bb55f8",
+      "source": "stackexchange",
+      "kind": "question",
+      "url": "https://example.org/stackexchange/question/00019",
+      "title": "How do I make a lumen status line update every second?",
+      "author": "hollowpine",
+      "published": "2026-04-02T16:14:50Z",
+      "excerpt": "New blog post: how I use lumen to watch my builds. Screenshots in the thread.",
+      "metrics": {
+        "score": 11,
+        "views": 280
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "e44e745e914935e0",
+      "source": "x",
+      "kind": "reply",
+      "url": "https://example.org/x/reply/00054",
+      "title": "Is lumen worth it over a plain shell prompt? Thoughts?",
+      "author": "@glintwire",
+      "published": "2026-04-01T10:34:25Z",
+      "excerpt": "Is lumen worth it over a plain shell prompt? Thoughts?. Screenshots in the thread.",
+      "metrics": {
+        "likes": 2,
+        "replies": 0,
+        "reposts": 2,
+        "views": 4096
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "9558ba77faedcaf5",
+      "source": "x",
+      "kind": "reply",
+      "url": "https://example.org/x/reply/00024",
+      "title": "Is lumen worth it over a plain shell prompt? Thoughts?",
+      "author": "@cindertrail",
+      "published": "2026-03-31T05:39:17Z",
+      "excerpt": "Is lumen worth it over a plain shell prompt? Thoughts?. Config below.",
+      "metrics": {
+        "likes": 74,
+        "replies": 5,
+        "reposts": 11,
+        "views": 3564
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "367eba4b88eb332d",
+      "source": "web",
+      "kind": "article",
+      "url": "https://example.net/articles/064",
+      "title": "Notes on lumen's widget model",
+      "author": "Open Shelf",
+      "published": "2026-03-28T17:48:30Z",
+      "excerpt": "A long read about plugins and why small tools win.",
+      "reason": "links the project page"
+    },
+    {
+      "id": "f9629b426e535328",
+      "source": "reddit",
+      "kind": "post",
+      "url": "https://example.org/reddit/post/00043",
+      "title": "lumen idles at almost no CPU, which matters on this old machine",
+      "author": "tidepool_dev",
+      "published": "2026-03-28T05:32:26Z",
+      "excerpt": "lumen idles at almost no CPU, which matters on this old machine. Config below.",
+      "metrics": {
+        "comments": 57,
+        "points": 182
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "5957a0720c287405",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/noise/94",
+      "title": "lumen of the room was perfect",
+      "author": "marrowlight",
+      "published": "2026-03-18T19:56:26Z",
+      "relevance": "noise",
+      "reason": "the word lumen, not the project"
+    },
+    {
+      "id": "49f7e3c1d00db4c6",
+      "source": "web",
+      "kind": "article",
+      "url": "https://example.net/articles/063",
+      "title": "Getting started with lumen on macOS",
+      "author": "The Plain Terminal",
+      "published": "2026-03-13T05:45:05Z",
+      "excerpt": "A long read about layouts and why small tools win.",
+      "reason": "links the project page"
+    },
+    {
+      "id": "d622d3c88d64491b",
+      "source": "x",
+      "kind": "reply",
+      "url": "https://example.org/x/reply/00057",
+      "title": "Wrote a lumen widget for my weather station",
+      "author": "@duskhollow",
+      "published": "2026-03-10T00:52:17Z",
+      "excerpt": "Wrote a lumen widget for my weather station. ",
+      "metrics": {
+        "likes": 98,
+        "replies": 11,
+        "reposts": 7,
+        "views": 11987
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    },
+    {
+      "id": "7011067d50e5be97",
+      "source": "github",
+      "kind": "code",
+      "group": "lists",
+      "url": "https://example.com/tidepool/awesome-terminal/README.md",
+      "title": "tidepool/awesome-terminal",
+      "author": "tidepool",
+      "published": "2026-03-04T07:00:44Z",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "id": "8d428daa8fe577b1",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/nightjar/homelab/issue/85",
+      "title": "nightjar/homelab: Add a lumen widget to the status line",
+      "author": "nightjar",
+      "published": "2026-03-01T21:08:51Z",
+      "metrics": {
+        "comments": 6,
+        "reactions": 5
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "d1aa60cf67892d7b",
+      "source": "github",
+      "kind": "discussion",
+      "url": "https://example.com/glintwire/tui-list/discussion/86",
+      "title": "glintwire/tui-list: Support lumen themes in the installer",
+      "author": "glintwire",
+      "published": "2026-02-24T07:01:13Z",
+      "metrics": {
+        "comments": 11,
+        "reactions": 3
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "c6ed3aad48499c30",
+      "source": "bluesky",
+      "kind": "post",
+      "url": "https://example.org/bluesky/post/00020",
+      "title": "The lumen config format is so pleasant to write",
+      "author": "@glintwire",
+      "published": "2026-02-24T03:35:48Z",
+      "excerpt": "The lumen config format is so pleasant to write. Screenshots in the thread.",
+      "metrics": {
+        "likes": 8,
+        "replies": 2,
+        "reposts": 7
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "2e42232d2c4d4b13",
+      "source": "web",
+      "kind": "article",
+      "url": "https://example.net/articles/061",
+      "title": "Five dashboards for your terminal, ranked",
+      "author": "The Tiling Desk",
+      "published": "2026-02-22T22:03:15Z",
+      "excerpt": "A long read about plugins and why small tools win.",
+      "reason": "links the project page"
+    },
+    {
+      "id": "e5ed060e35634b34",
+      "source": "web",
+      "kind": "article",
+      "url": "https://example.net/articles/062",
+      "title": "How lumen draws a 60 fps clock in a terminal",
+      "author": "The Tiling Desk",
+      "published": "2026-02-22T09:41:07Z",
+      "excerpt": "A long read about plugins and why small tools win.",
+      "reason": "links the project page"
+    },
+    {
+      "id": "849175ebf83a25db",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/brambleworks/workstation/issue/80",
+      "title": "brambleworks/workstation: Package lumen for this distro",
+      "author": "brambleworks",
+      "published": "2026-02-15T21:42:01Z",
+      "metrics": {
+        "comments": 9,
+        "reactions": 6
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "ba486c6d1c533d52",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00016",
+      "title": "Anyone else running lumen on a Raspberry Pi? Works great here",
+      "author": "@emberwake",
+      "published": "2026-02-09T22:39:01Z",
+      "excerpt": "Anyone else running lumen on a Raspberry Pi? Works great here. Screenshots in the thread.",
+      "metrics": {
+        "likes": 98,
+        "replies": 9,
+        "reposts": 20,
+        "views": 248
+      },
+      "relevance": "unverified",
+      "reason": "says lumen without context"
+    },
+    {
+      "id": "e8ac8fab6d49a9b6",
+      "source": "x",
+      "kind": "post",
+      "url": "https://example.org/x/post/00025",
+      "title": "lumen 1.0 just landed and the clock widget alone sells it",
+      "author": "@quietkernel",
+      "published": "2026-01-14T23:11:27Z",
+      "excerpt": "lumen 1.0 just landed and the clock widget alone sells it. Highly recommend.",
+      "metrics": {
+        "likes": 131,
+        "replies": 11,
+        "reposts": 1,
+        "views": 1000
+      },
+      "relevance": "likely",
+      "reason": "names lumen with terminal words"
+    },
+    {
+      "id": "8b8a20c226c33b50",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/copperleaf/dotfiles/pr/74",
+      "title": "copperleaf/dotfiles: feat: add lumen config",
+      "author": "copperleaf",
+      "published": "2026-01-10T11:09:32Z",
+      "metrics": {
+        "comments": 4,
+        "reactions": 9
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "38969af129adcddb",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/thistle/arch-setup/pr/75",
+      "title": "thistle/arch-setup: nix: add lumen module",
+      "author": "update-bot",
+      "published": "2026-01-07T06:16:11Z",
+      "metrics": {
+        "comments": 11,
+        "reactions": 6
+      },
+      "relevance": "automation",
+      "reason": "a bot bumps a version"
+    },
+    {
+      "id": "e687cee6a69fefb2",
+      "source": "github",
+      "kind": "code",
+      "group": "lists",
+      "url": "https://example.com/fogline/awesome-tui/README.md",
+      "title": "fogline/awesome-tui",
+      "author": "fogline",
+      "published": "2025-12-24T22:11:09Z",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "id": "f3cf68b7d3bf0072",
+      "source": "github",
+      "kind": "issue",
+      "url": "https://example.com/fogline/awesome-tui/issue/72",
+      "title": "fogline/awesome-tui: Package lumen for this distro",
+      "author": "fogline",
+      "published": "2025-12-19T07:06:41Z",
+      "metrics": {
+        "comments": 8,
+        "reactions": 5
+      },
+      "relevance": "real"
+    },
+    {
+      "id": "4dd1b79e2359459b",
+      "source": "github",
+      "kind": "pr",
+      "url": "https://example.com/emberwake/.config/pr/89",
+      "title": "emberwake/.config: chore: update lumen to 1.0.2",
+      "author": "emberwake",
+      "published": "2025-12-16T09:21:00Z",
+      "metrics": {
+        "comments": 13,
+        "reactions": 7
+      },
+      "relevance": "likely"
+    },
+    {
+      "id": "3f38e134c6cafdbd",
+      "source": "hackernews",
+      "kind": "comment",
+      "url": "https://example.org/hackernews/comment/00058",
+      "title": "lumen made me delete four shell scripts",
+      "author": "inkwell_io",
+      "published": "2025-10-04T13:08:03Z",
+      "excerpt": "lumen made me delete four shell scripts. ",
+      "metrics": {
+        "comments": 38,
+        "points": 177
+      },
+      "relevance": "real",
+      "reason": "links the project page"
+    }
+  ]
+}
